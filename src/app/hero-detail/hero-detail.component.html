@@ -1,0 +1,19 @@
+<div *ngIf="hero">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div>
+    <span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="hero.name" placeholder="name">
+    </label>
+  </div>
+<br/>
+  <div>
+    <button (click)="goBack()">go back</button>
+    <button (click)="save()">save</button>
+  </div>
+</div>
+
+<!-- debugging techniques using pipe-->
+<p> I can see the whole model here! :</p> {{hero | json}} <br/>
+Read more at https://www.pluralsight.com/guides/front-end-javascript/debugging-angular-2-applications#avx7RcoeJFWZkxpW.99
